@@ -55,8 +55,8 @@ function showInfoFloatFor(building) {
 
 function showInfoFloat(buildingName, buildingInformation) {
 	$("#info_float").fadeIn(200);
-	document.getElementById("info_float").getElementsByTagName("h1")[0].innerHTML = buildingName;
-	document.getElementById("info_float").getElementsByTagName("p")[0].innerHTML = buildingInformation;
+	$('#info_float h1').html(buildingName);
+	$('#info_float_p').html(buildingInformation);
 }
 
 function hideInfoFloat() {
