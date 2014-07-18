@@ -1,0 +1,232 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+
+	<div id="container">
+
+		<div id="body">
+
+			<div id="info_float">
+				<span id="info_float_text">
+					<h1></h1>
+					<p id="info_float_p"></p>
+					<p id="info_float_subtext">Click the building for images and directions</p>
+				</span>
+			</div>
+
+			<map name="image_map" id="image_map">
+				<area id="map_HSB" href="" shape="rect" coords="346,148,475,260" target="_self"/>
+				<area id="map_TEXACO" href="" shape="rect" coords="594,104,647,157" target="_self"/>
+				<area id="map_NCPTT" href="" shape="rect" coords="576,220,636,276" target="_self"/>
+				<area id="map_GYM" href="" shape="rect" coords="374,266,445,359" starget="_self"/>
+				<area id="map_HONORS" href="" shape="rect" coords="217,327,318,393" target="_self"/>
+				<area id="map_CPT" href="" shape="rect" coords="194,216,350,312" target="_self"/>
+				<area id="map_MAB" href="" shape="rect" coords="272,130,323,215" target="_self"/>
+				<area id="map_LIBRARY" href="" shape="rect" coords="0,0,135,121" target="_self"/>
+			</map>
+
+			<img id="map" src="Design/MAP_DRAWN.png" usemap="#image_map"/>
+
+		</div>
+
+		<div id="picture_view">
+		
+		</div>
+
+	</div>
+
+	<div id="branding">
+		Map Developed by Connor Elsea
+	</div>
+
+	<script type="text/javascript">
+
+	/*
+	* Float Positioning and Setup Code
+	*
+	* This code contains an enumeration of the buildings shown on the
+	* campus map and various function that show or hide the informational
+	* popup that appears on the left side of the map when you hover over
+	* a building.
+	*/
+
+	var Building = {
+		HSB: 1,
+		MAB: 2,
+		CPT: 3,
+		GYM: 4,
+		HONORS: 5,
+		LIBRARY: 6,
+		NCPTT: 7,
+		TEXACO: 8
+	};
+
+	function showInfoFloatFor(building) {
+
+		if (building == Building.HSB) showInfoFloat(
+			"HSB",
+			"LSMSA's main academic building. It contains three stories of classrooms, offices, computer labs, scientific laboratories, and an multi-leveled auditorium with a stage for school meetings and artistic performances."
+		);
+		else if (building == Building.MAB) showInfoFloat(
+			"MAB",
+			"LSMSA's building that houses classrooms and utilties relevant to the visual and auditory arts. It contains two stories of private music practice rooms, art studies, architecture studies, pottery wheels, offices, classrooms, and an Apple iMac computer lab."
+		);
+		else if (building == Building.CPT) showInfoFloat(
+			"CPT",
+			"..."
+		);
+		else if (building == Building.GYM) showInfoFloat(
+			"Gym and SAC",
+			"..."
+		);
+		else if (building == Building.HONORS) showInfoFloat(
+			"NSU Honors College",
+			"..."
+		);
+		else if (building == Building.LIBRARY) showInfoFloat(
+			"NSU Watson Library",
+			"..."
+		);
+		else if (building == Building.NCPTT) showInfoFloat(
+			"NCPTT",
+			"..."
+		);
+		else if (building == Building.TEXACO) showInfoFloat(
+			"Texaco",
+			"..."
+		);
+		else showInfoFloat("Error", "Error");
+
+	}
+
+	function showInfoFloat(buildingName, buildingInformation) {
+		$("#info_float").fadeIn(200);
+		document.getElementById("info_float").getElementsByTagName("h1")[0].innerHTML = buildingName;
+		document.getElementById("info_float").getElementsByTagName("p")[0].innerHTML = buildingInformation;
+	}
+
+	function hideInfoFloat() {
+		$("#info_float").fadeOut(200);
+	}
+
+	/*
+	* Picture Viewer Code
+	*
+	* This section of code contains helper functions used to create
+	* the image viewer portion of this web app. Images of each building
+	* can be viewed when they are clicked.
+	*/
+
+	function setupPictureView() {
+		document.getElementById("body").innerHTML = "HELLO.";
+	}
+
+	/*
+	* Image Map Code
+	*
+	* Code to handle the events fired when areas of the image map
+	* are clicked or hovered over.
+	*/
+
+	/* HSB Map Events */
+	$('#map_HSB').hover(
+		function(event) { showInfoFloatFor(Building.HSB); },
+		function(event) { hideInfoFloat(); }
+	);
+
+	$('#map_HSB').click(
+		function(event) {
+
+		}
+	);
+
+	/* MAB Map Events */
+	$('#map_MAB').hover(
+		function(event) { showInfoFloatFor(Building.MAB); },
+		function(event) { hideInfoFloat(); }
+	);
+
+	$('#map_MAB').click(
+		function(event) {
+
+		}
+	);
+
+	/* CPT Map Events */
+	$('#map_CPT').hover(
+		function(event) { showInfoFloatFor(Building.CPT); },
+		function(event) { hideInfoFloat(); }
+	);
+
+	$('#map_CPT').click(
+		function(event) {
+
+		}
+	);
+
+	/* GYM Map Events */
+	$('#map_GYM').hover(
+		function(event) { showInfoFloatFor(Building.GYM); },
+		function(event) { hideInfoFloat(); }
+	);
+
+	$('#map_GYM').click(
+		function(event) {
+
+		}
+	);
+
+	/* HONORS Map Events */
+	$('#map_HONORS').hover(
+		function(event) { showInfoFloatFor(Building.HONORS); },
+		function(event) { hideInfoFloat(); }
+	);
+
+	$('#map_HONORS').click(
+		function(event) {
+
+		}
+	);
+
+	/* LIBRARY Map Events */
+	$('#map_LIBRARY').hover(
+		function(event) { showInfoFloatFor(Building.LIBRARY); },
+		function(event) { hideInfoFloat(); }
+	);
+
+	$('#map_LIBRARY').click(
+		function(event) {
+
+		}
+	);
+
+	/* NCPTT Map Events */
+	$('#map_NCPTT').hover(
+		function(event) { showInfoFloatFor(Building.NCPTT); },
+		function(event) { hideInfoFloat(); }
+	);
+
+	$('#map_NCPTT').click(
+		function(event) {
+
+		}
+	);
+
+	/* TEXACO Map Events */
+	$('#map_TEXACO').hover(
+		function(event) { showInfoFloatFor(Building.TEXACO); },
+		function(event) { hideInfoFloat(); }
+	);
+
+	$('#map_TEXACO').click(
+		function(event) {
+
+		}
+	);
+
+	</script>
+
+</body>
