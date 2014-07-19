@@ -1,22 +1,54 @@
+/* RESET */
+
 * {
+
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+
 }
 
+/* CONTAINER - Contains both views */
+
 #container {
+
 	position: relative;
 	display: block;
+
 }
 
 body {
+
 	position: relative;
+
 }
 
+/* BRANDING - Self promotion below web app */
+
+#branding {
+
+	padding: 5px;
+
+	color: #888888;
+
+	font-family: "Arial", Arial, sans-serif;
+	font-style: italic;
+	font-size: 11;
+
+	position: relative;
+	display: block;
+
+	top: 400px;
+
+}
+
+/* BODY - Contains the map view */
+
 #body {
+
 	width: 720px;
 	min-width: 720px;
 	max-width: 720px;
@@ -32,24 +64,15 @@ body {
 	position: absolute;
 	display: block;
 	z-index: 90;
+
 }
 
-#branding {
-	padding: 5px;
-
-	color: #888888;
-
-	font-family: "Arial", Arial, sans-serif;
-	font-style: italic;
-	font-size: 11;
-
-	position: relative;
-	display: block;
-
-	top: 400px;
-}
+/* INFO FLOAT - CSS relevant to the 
+* floating information panel in the map view
+*/
 
 #info_float {
+
 	display: none;
 
 	background-color: #F0F0F0;
@@ -75,13 +98,17 @@ body {
 
 	position: absolute;
 	z-index: 100;
+
 }
 
 #info_float_text {
+
 	font-family: "Arial", Arial, sans-serif;
+
 }
 
 #info_float_text > h1 {
+
 	margin: 0;
 
 	font-weight: bold;
@@ -89,27 +116,34 @@ body {
 }
 
 #info_float_p {
+
 	margin: 0;
 	padding-top: 10px;
 
 	line-height: 1.4;
 	font-style: normal;
 	font-size: 12;
+
 }
 
 #info_float_subtext {
+
 	padding-top: 10px;
 
 	color: #505050;
 	font-style: italic;
 	font-size: 12;
+
 }
 
 #image_map > area {
 	outline: none;
 }
 
+/* PICTURE VIEW - CSS relevant to the second view for pictures */
+
 #picture_view {
+
 	width: 720px;
 	min-width: 720px;
 	max-width: 720px;
@@ -130,9 +164,11 @@ body {
 	position: absolute;
 	display: block;
 	z-index: 110;
+
 }
 
 #title_area {
+
 	width: 500px;
 	min-width: 500px;
 	max-width: 500px;
@@ -142,4 +178,5 @@ body {
 	max-height: 100;
 
 	font-family: "Arial", Arial, sans-serif;
+
 }
