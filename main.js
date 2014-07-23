@@ -18,7 +18,8 @@ var Building = {
 };
 
 function showInfoFloatFor(building) {
-		if (building == Building.HSB) showInfoFloat(
+
+	if (building == Building.HSB) showInfoFloat(
 		"HSB",
 		"LSMSA's main academic building. It contains three stories of classrooms, offices, computer labs, scientific laboratories, and an multi-leveled auditorium with a stage for school meetings and artistic performances."
 	);
@@ -51,6 +52,7 @@ function showInfoFloatFor(building) {
 		"..."
 	);
 	else showInfoFloat("Error", "Error");
+
 }
 
 function showInfoFloat(buildingName, buildingInformation) {
@@ -71,8 +73,14 @@ function hideInfoFloat() {
 * can be viewed when they are clicked.
 */
 
-function setupPictureView() {
-	document.getElementById("body").innerHTML = "HELLO.";
+function setupPictureView(building) {
+
+	$("#picture_view").css("display", "block");
+
+}
+
+function hidePictureView() {
+	$("#picture_view").css("display" , "none");
 }
 
 /*
@@ -90,7 +98,7 @@ $('#map_HSB').hover(
 
 $('#map_HSB').click(
 	function(event) {
-
+		setupPictureView(Building.HSB);
 	}
 );
 

@@ -162,7 +162,7 @@ body {
 	background-color: #e5e4cd;
 
 	position: absolute;
-	display: block;
+	display: none;
 	z-index: 110;
 
 }
