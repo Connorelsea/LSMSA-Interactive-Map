@@ -79,6 +79,14 @@ function hideInfoFloat() {
 
 function setupPictureView(building) {
 
+	// Setup Bootstrap Elements
+
+	$("#carousel").carousel({
+		interval : 1000,
+		wrap: true
+	});
+
+	$("#modal").modal();
 
 }
 
