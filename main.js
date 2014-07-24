@@ -86,7 +86,9 @@ function setupPictureView(building) {
 		wrap: true
 	});
 
-	$("#modal").modal();
+	$("#modal").modal({
+		keyboard: true
+	});
 
 }
 
