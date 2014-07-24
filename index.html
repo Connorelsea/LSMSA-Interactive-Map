@@ -1,6 +1,10 @@
 <head>
+	
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="C:\Sections\Programming\Bootstrap\css\bootstrap.min.css">
+
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -32,18 +36,6 @@
 
 		</div>
 
-		<div id="picture_view">
-
-			<img id="button_left" src=""></img>
-			<img id="button_right" src=""></img>
-
-			<div id="button_container">
-				<a href="#" id="btn_back">Back to Map</a>
-				<a href="#" id="btn_directions">Get Directions</a>
-			</div>
-
-		</div>
-
 	</div>
 
 	<div id="branding">
@@ -52,4 +44,78 @@
 
 </body>
 
+<!-- Custom Bootstrap Code -->
+
+
+
+<div
+	id="modal"
+	class="modal fade bs-example-modal-lg"
+	tabindex="-1"
+	role="dialog"
+	aria-labelledby="myLargeModalLabel"
+	aria-hidden="true"
+>
+
+	<div class="modal-dialog modal-lg">
+
+		<!-- Modal Content Container-->
+		<div class="modal-content">
+			
+			<!-- Modal Header-->
+			<div class="modal-header">
+				
+			</div>
+
+			<!-- Modal Body-->
+			<div class="modal-body-custom">
+				
+				<!-- Carousel HTML -->
+
+					<div
+						id="carousel"
+						class="carousel slide"
+						data-ride="carousel"
+					>
+
+						<ol class="carousel-indicators">
+	 						<li data-target="#carousel" data-slide-to="0" class="active"></li>
+							<li data-target="#carousel" data-slide-to="1"></li>
+							<li data-target="#carousel" data-slide-to="2"></li>
+						</ol>
+
+						<div class="carousel-inner">
+							
+							<div class="item active">
+								<img src="" alt="">
+							</div>
+
+						</div>
+						
+					</div>
+
+				<!-- Carousel HTML End -->
+
+			</div>
+
+			<!-- Modal Footer -->
+			<div class="modal-footer">
+				
+				<button type="button" class="btn" data-dismiss="modal" aria-hidden="true">
+					Close
+				</button>
+
+			</div>
+
+		</div>
+
+		
+
+	</div>
+
+</div>
+
+<!-- End of Custom Boostrap Code -->
+
+<script src="C:\Sections\Programming\Bootstrap\js\bootstrap.min.js"></script>
 <script type="text/javascript" src="main.js"></script>

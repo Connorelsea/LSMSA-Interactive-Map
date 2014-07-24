@@ -167,17 +167,16 @@ body {
 
 }
 
-#button_container a {
+.btc_btn {
 	width: 150px;
 	min-width: 150px;
 	max-width: 150px;
 
-	height: 20px;
-	min-height: 20px;
-	max-height: 20px;
+	height: 30px;
+	min-height: 30px;
+	max-height: 30px;
 
 	font-family: "Arial", Arial, sans-serif;
-	text-decoration: none;
 	text-align: center;
 
 	border: 2px solid;
@@ -192,6 +191,14 @@ body {
 	display: block;
 }
 
-#button_container a:hover {
+.btc_btn:hover {
 	opacity: 0.9;
 };
+
+/*
+MODAL STYLING
+*/
+
+.modal-body-custom {
+	padding: 0px;
+}

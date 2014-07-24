@@ -1,3 +1,7 @@
+$(document).ready(function(){
+    $('.carousel').carousel();
+});
+
 /*
 * Float Positioning and Setup Code
 *
@@ -75,21 +79,7 @@ function hideInfoFloat() {
 
 function setupPictureView(building) {
 
-	$("#picture_view").css("display", "block");
-	
-	/* FAULTY */
-	$('#map_NCPTT').click(
-		function(event) {
-			hidePictureView();
-			return false;
-		}
-	);
 
-
-}
-
-function hidePictureView() {
-	$("#picture_view").css("display" , "none");
 }
 
 /*
