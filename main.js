@@ -82,7 +82,7 @@ function setupPictureView(building) {
 	// Setup Bootstrap Elements
 
 	$("#carousel").carousel({
-		interval : 1000,
+		interval : 500,
 		wrap: true
 	});
 
@@ -93,25 +93,21 @@ function setupPictureView(building) {
 	// AJAX
 
 	$.ajax({
-		url:'buildings.php',
+		url:'building_ajax_req.php',
 		data: "building=" + building,
 		complete: function (response) {
 
 			var buildingObject = JSON.parse(response.responseText);
 
 			$(".modal-title-custom").html(buildingObject.name);
+			$(".modal-subtitle-custom").html(buildingObject.description);
 
 		},
 		error: function () {
 			//ERROR
 		},
 	});
-
-	// Make HTML alterations
-	// LOOK INTO AJAX AND REPLACE THIS WITH THAT 
-
-	//$(".modal-title-custom").html("<?php echo $building_HSB->name; ?>");
-
+	
 }
 
 /*

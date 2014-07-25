@@ -63,8 +63,18 @@
 			
 			<!-- Modal Header-->
 			<div class="modal-header">
+
+				<button type="button" class="close" data-dismiss="modal">
+				 	<span aria-hidden="true">&times;</span>
+				 	<span class="sr-only">Close</span>
+				 </button>
+
 				<h4 class="modal-title-custom">Default Title</h4>
-				<i>Press Escape to Exit</i>
+				<h5 class="modal-subtitle-custom">Press Escape to Exit</h5>
+
+				<button type="button" class="btn btn-primary">Get Directions</button>
+				<button type="button" class="btn btn-primary">View on Google Maps</button>
+
 			</div>
 
 			<!-- Modal Body-->

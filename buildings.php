@@ -20,48 +20,44 @@ class Building
 
 $bHSB = new Building(
 	"HSB",
-	"description",
+	"LSMSA's main academic building. It contains three stories of classrooms, offices, computer labs, scientific laboratories, and an multi-leveled auditorium with a stage for school meetings and artistic performances.",
 	"directionsURL",
-	[1 => "URL 1", 2 => "URL 2"]
+	array(
+	1 => "http://farm3.staticflickr.com/2252/2059274932_5fb49e7899_z.jpg?zz=1",
+	2 => "http://farm3.staticflickr.com/2277/2539793296_e485280b6c_z.jpg?zz=1"
+	)
 );
 
 $bMAB = new Building(
 	"MAB",
-	"description",
+	"LSMSA's building that houses classrooms and utilties relevant to the visual and auditory arts. It contains two stories of private music practice rooms, art studies, architecture studies, pottery wheels, offices, classrooms, and an Apple iMac computer lab.",
 	"directionsURL",
-	[1 => "URL 1", 2 => "URL 2"]
+	array(
+		1 => "URL 1",
+		2 => "URL 2"
+	)
 );
 
 $bCPT = new Building(
 	"CPT",
 	"description",
 	"directionsURL",
-	[1 => "URL 1", 2 => "URL 2"]
+	array(
+		1 => "URL 1",
+		2 => "URL 2"
+	)
 );
 
 $bGYM = new Building(
 	"GYM",
 	"description",
 	"directionsURL",
-	[1 => "URL 1", 2 => "URL 2"]
+	array(
+		1 => "URL 1",
+		2 => "URL 2"
+	)
 );
 
 $buildings = array($bHSB, $bMAB, $bCPT, $bGYM);
-
-// Handle AJAX
-
-$buildingName = "";
-$buildingName = isset($_GET['building']) ? $_GET['building'] : '';
-$correctBuilding = $bHSB;
-
-foreach ($buildings as $b) {
-
-	if (strcmp($b->name, $buildingName) == false) {
-		$correctBuilding = $b;
-	}
-
-}
-
-print json_encode($correctBuilding);
 
 ?>
