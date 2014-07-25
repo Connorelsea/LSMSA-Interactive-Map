@@ -11,14 +11,14 @@ $(document).ready(function(){
 * a building.
 */
 var Building = {
-	HSB: 1,
-	MAB: 2,
-	CPT: 3,
-	GYM: 4,
-	HONORS: 5,
-	LIBRARY: 6,
-	NCPTT: 7,
-	TEXACO: 8
+	HSB: "HSB",
+	MAB: "MAB",
+	CPT: "CPT",
+	GYM: "GYM",
+	HONORS: "NSU Honors College",
+	LIBRARY: "NSU Watson Library",
+	NCPTT: "NCPTT",
+	TEXACO: "Texaco"
 };
 
 function showInfoFloatFor(building) {
@@ -89,6 +89,28 @@ function setupPictureView(building) {
 	$("#modal").modal({
 		keyboard: true
 	});
+
+	// AJAX
+
+	$.ajax({
+		url:'buildings.php',
+		data: "building=" + building,
+		complete: function (response) {
+
+			var buildingObject = JSON.parse(response.responseText);
+
+			$(".modal-title-custom").html(buildingObject.name);
+
+		},
+		error: function () {
+			//ERROR
+		},
+	});
+
+	// Make HTML alterations
+	// LOOK INTO AJAX AND REPLACE THIS WITH THAT 
+
+	//$(".modal-title-custom").html("<?php echo $building_HSB->name; ?>");
 
 }
 

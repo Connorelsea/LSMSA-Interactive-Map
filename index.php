@@ -1,11 +1,10 @@
 <head>
-	
-	<?php include("buildings.php"); ?> 
 
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" href="C:\xampp\htdocs\Bootstrap\css\bootstrap.min.css">
-
+	<link rel="stylesheet" href="Bootstrap\css\bootstrap.min.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<?php include("buildings.php"); ?>
 
 </head>
 
@@ -17,8 +16,8 @@
 
 			<div id="info_float">
 				<span id="info_float_text">
-					<h1></h1>
-					<p id="info_float_p"></p>
+					<h1>Default Title</h1>
+					<p id="info_float_p">Default paragraph.</p>
 					<p id="info_float_subtext">Click the building for images and directions</p>
 				</span>
 			</div>
@@ -48,8 +47,6 @@
 
 <!-- Custom Bootstrap Code -->
 
-
-
 <div
 	id="modal"
 	class="modal fade bs-example-modal-lg"
@@ -66,7 +63,8 @@
 			
 			<!-- Modal Header-->
 			<div class="modal-header">
-				
+				<h4 class="modal-title-custom">Default Title</h4>
+				<i>Press Escape to Exit</i>
 			</div>
 
 			<!-- Modal Body-->
@@ -117,18 +115,7 @@
 
 			</div>
 
-			<!-- Modal Footer -->
-			<div class="modal-footer">
-				
-				<button type="button" class="btn" data-dismiss="modal" aria-hidden="true">
-					Close
-				</button>
-
-			</div>
-
 		</div>
-
-		
 
 	</div>
 
@@ -136,5 +123,5 @@
 
 <!-- End of Custom Boostrap Code -->
 
-<script src="C:\xampp\htdocs\Bootstrap\js\bootstrap.min.js"></script>
+<script src="Bootstrap\js\bootstrap.min.js"></script>
 <script type="text/javascript" src="main.js"></script>
