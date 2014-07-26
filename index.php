@@ -99,13 +99,15 @@
 						<!-- Carousel Item Container -->
 
 						<div class="carousel-inner">
+
+						<P> TEST <P>
 							
 							<div class="item active">
-								<img src="http://i1.ytimg.com/vi/P6jrMpJRKIs/maxresdefault.jpg" alt="">
+								<img class="image1" src="http://i1.ytimg.com/vi/P6jrMpJRKIs/maxresdefault.jpg" alt="">
 							</div>
 
 							<div class="item">
-								<img src="http://i1.ytimg.com/vi/3lRYq5zH6yQ/maxresdefault.jpg" alt="">
+								<img class="image2" src="http://i1.ytimg.com/vi/3lRYq5zH6yQ/maxresdefault.jpg" alt="">
 							</div>
 
 						</div>

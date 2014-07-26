@@ -79,6 +79,48 @@ function hideInfoFloat() {
 
 function setupPictureView(building) {
 
+	// AJAX
+
+	$.ajax({
+		url:'building_ajax_req.php',
+		data: "building=" + building,
+		complete: function (response) {
+
+			// Convert the JSON formatted response into an object
+			var buildingObject = JSON.parse(response.responseText);
+
+			// Set the title and description
+			$(".modal-title-custom").html(buildingObject.name);
+			$(".modal-subtitle-custom").html(buildingObject.description);
+
+			// Get the image array from the object
+			var images = buildingObject.imageArray;
+			var amountOfImages = Object.keys(images).length;
+
+			// Clear Carousel inner HTML
+			$(".carousel-inner").html("");
+
+			// Loops through all of the images in the array
+			for (i = 1; i < amountOfImages + 1; i++) {
+
+				// Generate item active for first picture
+				if (i == 1) {
+					$(".carousel-inner").append("<div class=\"item active\"><img src=\"" + images[i] + "\"></div>");
+				}
+
+				// Generate general item for every other picture after first
+				else {
+					$(".carousel-inner").append("<div class=\"item\"><img src=\"" + images[i] + "\"></div>");
+				}
+
+			}
+
+		},
+		error: function () {
+			alert("There has been an AJAX error. Please contact the school's IT department.");
+		},
+	});
+
 	// Setup Bootstrap Elements
 
 	$("#carousel").carousel({
@@ -90,24 +132,6 @@ function setupPictureView(building) {
 		keyboard: true
 	});
 
-	// AJAX
-
-	$.ajax({
-		url:'building_ajax_req.php',
-		data: "building=" + building,
-		complete: function (response) {
-
-			var buildingObject = JSON.parse(response.responseText);
-
-			$(".modal-title-custom").html(buildingObject.name);
-			$(".modal-subtitle-custom").html(buildingObject.description);
-
-		},
-		error: function () {
-			//ERROR
-		},
-	});
-	
 }
 
 /*
@@ -137,7 +161,7 @@ $('#map_MAB').hover(
 
 $('#map_MAB').click(
 	function(event) {
-
+		setupPictureView(Building.MAB);
 	}
 );
 /* CPT Map Events */
@@ -148,7 +172,7 @@ $('#map_CPT').hover(
 
 $('#map_CPT').click(
 	function(event) {
-
+		setupPictureView(Building.CPT);
 	}
 );
 
@@ -160,7 +184,7 @@ $('#map_GYM').hover(
 
 $('#map_GYM').click(
 	function(event) {
-
+		setupPictureView(Building.GYM);
 	}
 );
 
@@ -172,7 +196,7 @@ $('#map_HONORS').hover(
 
 $('#map_HONORS').click(
 	function(event) {
-
+		setupPictureView(Building.HONORS);
 	}
 );
 
@@ -184,7 +208,7 @@ $('#map_LIBRARY').hover(
 
 $('#map_LIBRARY').click(
 	function(event) {
-
+		setupPictureView(Building.LIBRARY);
 	}
 );
 
@@ -196,7 +220,7 @@ $('#map_NCPTT').hover(
 
 $('#map_NCPTT').click(
 	function(event) {
-
+		setupPictureView(Building.NCPTT);
 	}
 );
 
@@ -208,6 +232,6 @@ $('#map_TEXACO').hover(
 
 $('#map_TEXACO').click(
 	function(event) {
-
+		setupPictureView(Building.TEXACO);
 	}
 );
